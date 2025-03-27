@@ -1,0 +1,15 @@
+# Loại bỏ node_modules
+node_modules/
+
+# Loại bỏ thư mục public (vì nó được tạo động)
+public/
+
+# Loại bỏ file log hoặc file tạm
+*.log
+*.tmp
+
+# Loại bỏ file cấu hình môi trường (nếu có sau này)
+.env
+
+# Loại bỏ file hệ thống
+.DS_Store
