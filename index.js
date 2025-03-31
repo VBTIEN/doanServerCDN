@@ -17,7 +17,12 @@ const corsOptions = {
 
 // Cấu hình middleware cơ bản
 app.use(compression()); // Nén dữ liệu
-app.use(helmet());      // Bảo mật cơ bản
+//app.use(helmet());      // Bảo mật cơ bản
+app.use(
+    helmet({
+        crossOriginResourcePolicy: { policy: 'cross-origin' }, // Cho phép tài nguyên cross-origin
+    })
+);
 app.use(cors(corsOptions));        // Thêm CORS
 app.use(express.raw({ type: '*/*', limit: '10mb' })); // Nhận dữ liệu thô (file Excel)
 
